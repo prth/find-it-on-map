@@ -15,7 +15,7 @@ class Location < ActiveRecord::Base
 
 	has_many :doctors, inverse_of: :location, foreign_key: "locality"
 	
-	searchable do
-		autocomplete :post_localityname, :using => :localityname
-	end
+	#searchable do
+	#	autocomplete :post_localityname, :using => :localityname
+	#end
 end
