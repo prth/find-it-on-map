@@ -7,21 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-SystemLanguage.create(name: "English",locale: "en",code: "en") 1
-SystemLanguage.create(name: "Gujarati",locale: "gu",code: "gu") 2
-SystemLanguage.create(name: "Hindi",locale: "hi",code: "hi") 3
-SystemLanguage.create(name: "Marathi",locale: "mr",code: "mr") 4
-SystemLanguage.create(name: "Tamil",locale: "ta",code: "ta") 5
+SystemLanguage.create(name: "English",locale: "en",code: "en") #1
+SystemLanguage.create(name: "Gujarati",locale: "gu",code: "gu") #2
+SystemLanguage.create(name: "Hindi",locale: "hi",code: "hi") #3
+SystemLanguage.create(name: "Marathi",locale: "mr",code: "mr") #4
+SystemLanguage.create(name: "Tamil",locale: "ta",code: "ta") #5
 
-Location.create(localityname: "India", locationtype: "0", latitude: "19.079767", longitude: "73.010018") 1
-Location.create(localityname: "Maharashtra", locationtype: "1", latitude: "19.079767", longitude: "73.010018") 2
-Location.create(localityname: "Mumbai, Maharashtra", locationtype: "2", latitude: "19.079767", longitude: "73.010018") 3
-Location.create(localityname: "Navi Mumbai, Maharashtra", locationtype: "2", latitude: "19.079767", longitude: "73.010018") 4
-Location.create(localityname: "Bandra, Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") 5
-Location.create(localityname: "Powai, Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") 6
+Location.create(localityname: "India", locationtype: "0", latitude: "19.079767", longitude: "73.010018") #1
+Location.create(localityname: "Maharashtra", locationtype: "1", latitude: "19.079767", longitude: "73.010018") #2
+Location.create(localityname: "Mumbai, Maharashtra", locationtype: "2", latitude: "19.079767", longitude: "73.010018") #3
+Location.create(localityname: "Navi Mumbai, Maharashtra", locationtype: "2", latitude: "19.079767", longitude: "73.010018") #4
+Location.create(localityname: "Bandra, Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") #5
+Location.create(localityname: "Powai, Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") #6
 
-Location.create(localityname: "Vashi, Navi Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") 7
-Location.create(localityname: "Nerul, Navi Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") 8
+Location.create(localityname: "Vashi, Navi Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") #7
+Location.create(localityname: "Nerul, Navi Mumbai, Maharashtra", locationtype: "3", latitude: "19.079767", longitude: "73.010018") #8
 
 
 Doctor.create(name: "Dr Sharma", email: "sharma@doctor.com", speciality: "primary", address: "sector 17, vashi, navi mumbai, maharashtra", locality: 7, city: 4, state: 2, country: 1)
