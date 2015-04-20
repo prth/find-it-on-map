@@ -1,0 +1,20 @@
+hi:
+  hello: "हैलो वर्ल्ड"
+  moto: "स्वस्थ रहो"
+  logo: "चिकित्सक खोजक"
+  searchBanner: "अपने पसंदीदा डॉक्टर"
+  searchInfo: "शिक्षा और अनुभव के आधार पर मूल्यांकन किया खोज 1,000,000 डॉक्टरों"
+  
+  specialities:
+    primaryCareDoctors: "प्राथमिक देखभाल डॉक्टरों"
+
+  aboutUs: "हमारे बारे में"
+  contactUs: "हमसे संपर्क करें"
+  blog: "ब्लॉग"
+  
+  languagues:
+    english: "English"
+    gujarati: "ગુજરાતી"
+    hindi: "हिन्दी"
+    marathi: "मराठी"
+    tamil: "தமிழ்"

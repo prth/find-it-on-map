@@ -1,0 +1,27 @@
+<% provide(:title, 'Home') %>
+<div class="searchBanner"> 
+	<div id="searchBlock">
+		<h1><%= t('searchBanner') %></h1>
+		
+		<div id="searchForm">
+			<form method="get" action="<%= @localeParam+search_path %>">
+				<div id="searchInput">
+					<div class="pull-left" id="searchMarkerIcon">
+						<span class="glyphicon glyphicon-map-marker"></span>
+					</div>
+					<div class="pull-right">
+						
+						<%=raw autocomplete_text_field "post", "search", "http://127.0.0.1:8983/solr/development/", "post_localityname", {name: 'f', method: 'post'}%>
+					</div>
+				</div>
+				<div id="searchAttributes">
+					<div class="pull-left" id="browseCategories">
+						<%= t('specialities.primaryCareDoctors') %>
+					</div>
+					<input type="submit" value="Search" class="pull-right" id="searchButton" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+

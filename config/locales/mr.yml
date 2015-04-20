@@ -1,0 +1,20 @@
+mr:
+  hello: "हॅलो जग"
+  moto: "निरोगी राहा!"
+  logo: "डॉक्टर शोधक"
+  searchBanner: "आपल्याला आवडतील एक डॉक्टर शोधा"
+  searchInfo: "शिक्षण आणि अनुभव रेट शोध 1.000.000 प्रती डॉक्टर"
+
+  specialities:
+    primaryCareDoctors: "प्राथमिक केअर डॉक्टर"
+
+  aboutUs: "आमच्या बद्दल"
+  contactUs: "आमच्याशी संपर्क साधा"
+  blog: "ब्लॉग"
+  
+  languagues:
+    english: "English"
+    gujarati: "ગુજરાતી"
+    hindi: "हिन्दी"
+    marathi: "मराठी"
+    tamil: "தமிழ்"  

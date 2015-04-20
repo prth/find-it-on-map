@@ -1,0 +1,23 @@
+<div class="filterBar">
+	<div class="pull-left" id="resultTabs">
+		
+	</div>
+	<div class="pull-right" id="filterInputs">
+		<form method="get" action="<%= @localeParam+search_path %>">
+		<div class="pull-left" id="searchInput">
+			<div class="pull-left" id="searchMarkerIcon">
+				<span class="glyphicon glyphicon-map-marker"></span>
+			</div>
+			<div class="pull-right">
+				<%=raw autocomplete_text_field "post", "search", "http://127.0.0.1:8983/solr/development/", "post_localityname", {name: 'f', method: 'post'}%>
+			</div>
+		</div>
+		<div class="pull-left" id="searchAttributes">
+			<div class="pull-left" id="browseCategories">
+				Primary Care Doctors
+			</div>
+			<input type="submit" value="Search" class="pull-right" id="searchButton" />
+		</div>
+		</form>
+	</div>
+</div>

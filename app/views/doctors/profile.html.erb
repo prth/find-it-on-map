@@ -1,0 +1,138 @@
+<%= render 'layouts/filterBarCommon' %>
+
+<% if !@doctor.nil?
+	if !@defaultLocale
+		@translatedInfo = @doctor.doctor_translations.where(system_language_id: @languageId).first
+		if !@translatedInfo.nil?
+			@doctor.name = @translatedInfo.name
+			@doctor.address = @translatedInfo.address
+		end
+	end
+%>
+<div class="profile">
+	<div id="profileMap">
+	</div>
+	<div class="container">
+		<div class="pull-left profileDetails">
+			<div class="pull-left profileImage">
+				<%= image_tag('userdefault.png', :width => 200)%>
+			</div>
+			<div class="pull-left profileBanner">
+				<h2><%= @doctor.name %> <span class="glyphicon glyphicon-ok-sign"></span></h2>
+				<h3>Dentist</h3>
+				<div class="phoneNo">+91-1234567890</div>
+				<p><%= @doctor.address %></p>
+			</div>
+		</div>
+	</div>
+	<div class="profileCounts">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-time"></span> &nbsp;<b>10</b> years of experience</h2>
+				</div>
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-user"></span> &nbsp;<b>40</b> years old</h2>
+				</div>
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-eye-open"></span> &nbsp;<b>1000</b> profile views</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="profileDescription">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="eachDescription">
+						<div class="heading">
+							<h3><%= @doctor.name %>'s Background</h3>
+						</div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula risus id vehicula finibus. Aenean lacinia augue non metus finibus, ac pretium turpis porta. Morbi volutpat fermentum elit, nec tincidunt dui luctus id. Vestibulum dui magna, viverra non malesuada at, tincidunt semper elit. Quisque elementum placerat est, nec aliquam enim rutrum non. Sed posuere lobortis est, eu blandit massa tristique at. Nam posuere magna mi, nec suscipit tortor laoreet nec. Proin laoreet neque sit amet turpis viverra vestibulum. Proin ac aliquam ex.
+						</div>
+					</div>
+					<div class="eachDescription">
+						<div class="heading">
+							<h3>Experience</h3>
+						</div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula risus id vehicula finibus. Aenean lacinia augue non metus finibus, ac pretium turpis porta. Morbi volutpat fermentum elit, nec tincidunt dui luctus id. Vestibulum dui magna, viverra non malesuada at, tincidunt semper elit. Quisque elementum placerat est, nec aliquam enim rutrum non. Sed posuere lobortis est, eu blandit massa tristique at. Nam posuere magna mi, nec suscipit tortor laoreet nec. Proin laoreet neque sit amet turpis viverra vestibulum. Proin ac aliquam ex.
+						</div>
+					</div>
+					<div class="eachDescription">
+						<div class="heading">
+							<h3>Education</h3>
+						</div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula risus id vehicula finibus. Aenean lacinia augue non metus finibus, ac pretium turpis porta. Morbi volutpat fermentum elit, nec tincidunt dui luctus id. Vestibulum dui magna, viverra non malesuada at, tincidunt semper elit. Quisque elementum placerat est, nec aliquam enim rutrum non. Sed posuere lobortis est, eu blandit massa tristique at. Nam posuere magna mi, nec suscipit tortor laoreet nec. Proin laoreet neque sit amet turpis viverra vestibulum. Proin ac aliquam ex.
+						</div>
+					</div>
+					<div class="eachDescription">
+						<div class="heading">
+							<h3>Specialities</h3>
+						</div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula risus id vehicula finibus. Aenean lacinia augue non metus finibus, ac pretium turpis porta. Morbi volutpat fermentum elit, nec tincidunt dui luctus id. Vestibulum dui magna, viverra non malesuada at, tincidunt semper elit. Quisque elementum placerat est, nec aliquam enim rutrum non. Sed posuere lobortis est, eu blandit massa tristique at. Nam posuere magna mi, nec suscipit tortor laoreet nec. Proin laoreet neque sit amet turpis viverra vestibulum. Proin ac aliquam ex.
+						</div>
+					</div>
+					<div class="eachDescription">
+						<div class="heading">
+							<h3>Language spoken in practice</h3>
+						</div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula risus id vehicula finibus. Aenean lacinia augue non metus finibus, ac pretium turpis porta. Morbi volutpat fermentum elit, nec tincidunt dui luctus id. Vestibulum dui magna, viverra non malesuada at, tincidunt semper elit. Quisque elementum placerat est, nec aliquam enim rutrum non. Sed posuere lobortis est, eu blandit massa tristique at. Nam posuere magna mi, nec suscipit tortor laoreet nec. Proin laoreet neque sit amet turpis viverra vestibulum. Proin ac aliquam ex.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="eachDescription">
+						<div class="heading">
+							<h3>Other <%= @doctor.speciality %> nearby</h3>
+						</div>
+						<div class="content">
+							<% if !@nearbySimilarDoctors.nil? %>
+							<% @nearbySimilarDoctors.each do |nearbyDoctor| %>
+								<a href="<%= @localeParam+profile_path %>?id=<%= nearbyDoctor.id %>" class="eachSimilar">
+							    <div class="pull-left eachImage">
+							      <%= image_tag('userdefault.png')%>
+							    </div>
+							    <div class="pull-left eachDetails">
+									  <h4><%= nearbyDoctor.name %>, MD</h4>
+							      <div class="speciality">Dentist</div>
+									  <div class="details"><%= nearbyDoctor.address %></div>
+							    </div>
+								</a>
+							<% end %>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var map;
+		function initializeMap() {
+	        var mapDiv = document.getElementById('profileMap');
+	        map = new google.maps.Map(mapDiv, {
+	          center: new google.maps.LatLng(<%= @doctor.latitude %>, <%= @doctor.longitude %>),
+	          zoom: 16,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        });
+            var latLng = new google.maps.LatLng(<%= @doctor.latitude %>, <%= @doctor.longitude %>); 
+	        var marker = new google.maps.Marker({
+            	position: latLng,
+            	map: map,
+            	title: "<%= @doctor.name %>"
+          	});
+	    }
+	    //google.maps.event.addDomListener(window, 'load', initializeMap);
+	    $(document).ready(function(){
+	    	initializeMap();
+	    })
+	</script>
+</div>
+<% else %>
+Nothing
+<% end %>

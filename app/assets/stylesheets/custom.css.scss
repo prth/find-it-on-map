@@ -1,0 +1,434 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* universal */
+
+$aliceBlue: #E4F1FE;
+$lightGrey: #F8F8F8;
+
+html {
+	
+}
+
+body {
+	
+}
+
+#customNavbar {
+	margin-bottom: 0;
+	background: #ffffff;
+	border-bottom: 2px solid #55B6AB;
+}
+
+.searchBanner {
+	height: 500px;
+	background-color: #c0392b;
+	margin-top: 0;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 3px rgba(0,0,0,0.3);
+	font-family: 'Roboto', sans-serif;
+
+	#searchBlock {
+		position: relative;
+		padding-top: 100px;
+		margin: 0px auto;
+		max-width: 600px;
+
+		#searchForm {
+			padding: 7px;
+			background: rgba(255,255,255,0.3);
+			margin: 0px auto;
+			max-width: 574px;
+			border-radius: 2px;
+
+			#searchInput {
+				width: 560px;
+				height: 40px;
+				background: #fff;
+
+				#searchMarkerIcon {
+					height: 40px;
+					line-height: 40px;
+					color: #000;
+					width: 40px;
+					text-align: center;
+				}
+
+				input[type="text"] {
+					color: #000;
+					outline: 0;
+					border: 0;
+					height: 40px;
+					width: 520px;
+					padding-right: 10px;
+					font-weight: 400;
+				}
+			}
+
+			#searchAttributes {
+				height: 40px;
+				margin-top: 7px;
+
+				#browseCategories {
+					background: #fff;
+					height: 40px;
+					width: 353px;
+					color: #34495e;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 39px;
+				}
+				#searchButton {
+					color: #fff;
+					height: 40px;
+					width: 200px;
+					background-color: #34495e;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 40px;
+					border: none;
+					font-family: inherit;
+				}
+			}
+			
+		}
+	}
+
+	h1, h2, h3, h4 {
+		margin-top: 0;
+		padding: 0;
+	}
+
+}
+
+
+#searchResultList {
+	width: 300px;
+	border-right: 1px solid #e8e8e8;
+	position: absolute;
+	top: 102px;
+	left: 0;
+	bottom: 0;
+	padding-top: 10px;
+	z-index: +2;
+	background-color: $lightGrey;
+	overflow-y: scroll;
+
+	.eachSearch {
+		border: 1px solid #e4e4e4;
+		border-bottom-width: 2px;
+		border-radius: 2px;
+		
+		margin: 10px 10px;
+		background-color: white;
+		width: 260px;
+		height: 100px;
+
+		h4 {
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			
+			font-weight: 700;
+		}
+		.details {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		.eachImage {
+			width: 80px;
+
+			img {
+				width: 80px;
+				height: 98px;
+			}
+		}
+		.eachDetails {
+			width: 176px;
+			padding: 10px;
+			height: 100px;
+			
+			.details {
+				font-size: 12px;
+				margin-top: 10px;
+				color: #666;
+			}
+		}
+	}
+}
+
+#searchResultMap {
+	padding-left: 1000px;
+	position: absolute;
+	top: 102px;
+	left: 300px;
+	right: 0;
+	bottom: 0;
+	padding-top: 52px;
+	z-index: +1;
+}
+
+.filterBar {
+	width: 100%;
+	min-height: 50px;
+	background-color: #65C6BB;
+	border-bottom: 2px solid #55B6AB;
+
+	#resultTabs {
+		font-size: 18px;
+		line-height: 50px;
+		
+		font-weight: 400;
+		width: 400px;
+		
+		span {
+
+		}
+		b {
+			font-weight: 900;
+		}
+
+		#resultTab {
+			width: 150px;
+			text-align: center;
+			border-right: 1px solid #55B6AB;
+			background-color: $lightGrey;
+		}
+		#shortlistTab {
+			width: 150px;
+			text-align: center;
+			color: #222;
+		}
+	}
+
+	#filterInputs {
+		padding-right: 15px;
+
+		#searchInput {
+			width: 560px;
+			height: 40px;
+			background: #fff;
+			margin-top: 4px;
+
+			#searchMarkerIcon {
+				height: 40px;
+				line-height: 40px;
+				color: #000;
+				width: 40px;
+				text-align: center;
+			}
+
+			input[type="text"] {
+				color: #000;
+				outline: 0;
+				border: 0;
+				height: 40px;
+				width: 520px;
+				padding-right: 10px;
+				font-weight: 400;
+			}
+		}
+
+		#searchAttributes {
+			height: 40px;
+			margin-top: 4px;
+			margin-left: 10px;
+
+			#browseCategories {
+				background: #fff;
+				height: 40px;
+				width: 353px;
+				color: #34495e;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 39px;
+				text-align: center;
+			}
+			#searchButton {
+				color: #fff;
+				height: 40px;
+				width: 200px;
+				background-color: #34495e;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 40px;
+				margin-left: 10px;
+				text-align: center;
+				border: none;
+				font-family: inherit;
+			}
+		}
+	}
+}
+
+.profile {
+	#profileMap {
+		width: 100%;
+		height: 400px;
+		
+	}
+	.profileDetails {
+		margin-top: 10px;
+		.profileBanner {
+			padding-left: 20px;
+
+			h2 {
+				margin: 0;
+				padding: 5px;
+				span {
+					font-size: 22px;
+					color: green;
+				}
+			}
+			h3 {
+				margin: 0;
+				padding: 5px;
+			}
+			.phoneNo {
+				padding: 10px 0 0;
+				font-size: 20px
+			}
+		}
+	}
+
+	.profileCounts {
+		background-color: #f4f4f4;
+		height: 60px;
+		margin-top: 10px;
+		border-bottom: 2px solid #d8d8d8;
+		
+		h2 {
+			margin: 0;
+			padding: 0;
+			line-height: 60px;
+			font-size: 20px;
+
+			b {
+				font-size: 22px;
+			}
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+	
+	.profileDescription {
+		padding: 40px 0;
+		background: #f2f2f2;
+		.eachDescription {
+			border: 1px solid #e8e8e8;
+			border-bottom: 2px solid #e8e8e8;
+			background: #fff;
+			margin-bottom: 10px;
+			.heading {
+				padding: 20px 25px 20px 25px;
+				border-bottom: 1px solid #e8e8e8;
+
+				h3 {
+					margin: 0;
+					padding: 0;
+					font-size: 18px;
+				}
+			}
+
+			.content {
+				padding: 15px 25px 30px;
+			}
+		}
+	}
+
+	.eachSimilar {
+		border: 1px solid #e4e4e4;
+		border-bottom-width: 2px;
+		border-radius: 2px;
+		display: block;
+		margin: 10px 0px;
+		background-color: white;
+		width: 100%;
+		height: 100px;
+
+		h4 {
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			
+			font-weight: 700;
+		}
+		.details {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		.eachImage {
+			width: 80px;
+
+			img {
+				width: 80px;
+				height: 98px;
+			}
+		}
+		.eachDetails {
+			width: 176px;
+			padding: 10px;
+			height: 100px;
+			
+			.details {
+				font-size: 12px;
+				margin-top: 10px;
+				color: #666;
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: #676767;
+	padding: 15px 0px 20px;
+	color: #fff;
+}
+
+.previewDiv {
+	
+		border-bottom-width: 2px;
+		border-radius: 2px;
+		display: block;
+		margin: 10px 0px;
+		background-color: white;
+		width: 100%;
+		height: 100px;
+
+		h4 {
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			
+			font-weight: 700;
+		}
+		.details {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		.eachImage {
+			width: 80px;
+
+			img {
+				width: 80px;
+				height: 98px;
+			}
+		}
+		.eachDetails {
+			width: 176px;
+			padding: 10px;
+			height: 100px;
+			
+			.details {
+				font-size: 12px;
+				margin-top: 10px;
+				color: #666;
+			}
+		}
+}

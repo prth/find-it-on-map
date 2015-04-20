@@ -1,0 +1,2 @@
+module DoctorTranslationsHelper
+end
