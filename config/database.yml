@@ -20,7 +20,8 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-	
+  encoding: unicode
+
 production:
   <<: *default
   database: db/production.sqlite3
