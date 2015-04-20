@@ -19,7 +19,7 @@
 
 class Doctor < ActiveRecord::Base
 	
-	belongs_to :location, inverse_of: :doctors
+	belongs_to :location, inverse_of: :doctor
 	
 	has_many :doctor_translations
 
